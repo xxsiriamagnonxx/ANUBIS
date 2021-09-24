@@ -2448,13 +2448,13 @@ bot_data:set(ban_id..'Name:Bot',text)
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  تم حفظ الاسم")
 return false
 end 
-if bot_data:get(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
+if bot_data:get(ban_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text == 'الغاء' or text == 'الغاء ●' then   
 send(msg.chat_id_, msg.id_," ● تم الغاء الاذاعه للخاص")
-bot_data:del(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+bot_data:del(ban_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end 
-local list = bot_data:smembers(bot_id..'User_Bot') 
+local list = bot_data:smembers(ban_id..'User_Bot') 
 if msg.content_.text_ then
 for k,v in pairs(list) do 
 send(v, 0,'['..msg.content_.text_..']')  
@@ -2478,14 +2478,14 @@ sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)
 end 
 end
 send(msg.chat_id_, msg.id_," ● تمت الاذاعه الى >>{"..#list.."} مشترك في البوت ")
-bot_data:del(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+bot_data:del(ban_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end
-if bot_data:get(bot_id.."YYYBD_aza3h3" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
+if bot_data:get(ban_id.."YYYBD_aza3h3" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
-local msa3d = bot_data:get(bot_id.."id:msa3d:ban")
+local msa3d = bot_data:get(ban_id.."id:msa3d:ban")
 if text == 'الغاء' or text == 'الغاء ●' then   
 send(msg.chat_id_, msg.id_," ● تم الغاء الرساله للمطور")
-bot_data:del(bot_id.."YYYBD_aza3h3" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+bot_data:del(ban_id.."YYYBD_aza3h3" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end 
 if text then
@@ -2497,17 +2497,17 @@ local textmsa3d = 'مرحبا عزيزي المساعد\n'..
 '\n'..text
 sendText(SUDO,textsudo,0,'md')
 sendText(msa3d,textmsa3d,0,'md')
-bot_data:del(bot_id.."YYYBD_aza3h3" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+bot_data:del(ban_id.."YYYBD_aza3h3" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end
 end,nil)
 end
-if bot_data:get(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
+if bot_data:get(ban_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text == 'الغاء' or text == 'الغاء ●' then   
 send(msg.chat_id_, msg.id_," ● تم الغاء الاذاعه")
-bot_data:del(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+bot_data:del(ban_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end 
-local list = bot_data:smembers(bot_id..'Chek:Groups') 
+local list = bot_data:smembers(ban_id..'Chek:Groups') 
 if msg.content_.text_ then
 for k,v in pairs(list) do 
 send(v, 0,'['..msg.content_.text_..']')  
@@ -2531,17 +2531,17 @@ sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)
 end 
 end
 send(msg.chat_id_, msg.id_," ● تمت الاذاعه الى >>{"..#list.."} كروب في البوت ")
-bot_data:del(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+bot_data:del(ban_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end
 
-if bot_data:get(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
+if bot_data:get(ban_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text == 'الغاء' or text == 'الغاء ●' then   
 send(msg.chat_id_, msg.id_," ● تم الغاء الاذاعه")
-bot_data:del(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+bot_data:del(ban_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  
 end 
 if msg.forward_info_ then 
-local list = bot_data:smembers(bot_id..'Chek:Groups')   
+local list = bot_data:smembers(ban_id..'Chek:Groups')   
 for k,v in pairs(list) do  
 tdcli_function({ID="ForwardMessages",
 chat_id_ = v,
@@ -2551,17 +2551,17 @@ disable_notification_ = 0,
 from_background_ = 1},function(a,t) end,nil) 
 end   
 send(msg.chat_id_, msg.id_," ● تمت الاذاعه الى >>{"..#list.."} جروبات في البوت ")
-bot_data:del(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+bot_data:del(ban_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 end
-if bot_data:get(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
+if bot_data:get(ban_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text == 'الغاء' or text == 'الغاء ●' then   
 send(msg.chat_id_, msg.id_," ● تم الغاء الاذاعه")
-bot_data:del(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+bot_data:del(ban_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  
 end 
 if msg.forward_info_ then 
-local list = bot_data:smembers(bot_id..'User_Bot')   
+local list = bot_data:smembers(ban_id..'User_Bot')   
 for k,v in pairs(list) do  
 tdcli_function({ID="ForwardMessages",
 chat_id_ = v,
@@ -2571,7 +2571,7 @@ disable_notification_ = 0,
 from_background_ = 1},function(a,t) end,nil) 
 end   
 send(msg.chat_id_, msg.id_," ● تمت الاذاعه الى >>{"..#list.."} مشترك في البوت ")
-bot_data:del(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+bot_data:del(ban_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 end
 if bot_data:get(ban_id.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
