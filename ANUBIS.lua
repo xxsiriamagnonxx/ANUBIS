@@ -14513,7 +14513,7 @@ end
 
 if text == 'رتبتي' then
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-send(msg.chat_id_, msg.id_,'✭︙ رتبتك في البوت » '..rtp)
+send(msg.chat_id_, msg.id_,'𖢅ٖ  رتـبـتـك هـي ➢ '..rtp)
 end
 
 if text == 'تفعيل رتبتي' and Manager(msg) then   
