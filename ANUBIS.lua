@@ -4027,17 +4027,16 @@ if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or te
 local Text = [[
 ◍ 𝗧𝗛𝗘 𝗕𝗘𝗦𝗧 𝗘𝗚 𝗦𝗢𝗥𝗖𝗘 𝗜𝗡 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 ⶄ 
 🌖
-◍ 𝙎𝙐𝙍𝘾𝙀 𝙎𝙄𝙍𝙄𝘼 𝘽𝙀𝙎𝙏 𝙎𝙐𝙍𝘾𝙀 𖢝  🐾
+◍ 𝗦𝗨𝗥𝗖𝗘 𝗔𝗡𝗨𝗕𝗜𝗦 𝗕𝗘𝗦𝗧 𝗦𝗨𝗥𝗖𝗘 𖡼 🐾
 ᶠᵒˡˡᵒʷ ᵗʰᵉ ᵈᵉᵛᵉˡᵒᵖᵉʳ ᵇᵘᵗᵗᵒᶰˢ ᵇᵉˡᵒʷ ♰ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'Dꫀꪜꫀꪶꪮρꫀ𝘳𝘴 𝅘𝅥𝅮', callback_data="/units"},{text = 'ᥴꫝꪖꪀꪀꫀꪶ𝅘𝅥𝅯  ', callback_data="/theytry"}},   
-{{text = '♪مــطــور الــبــوت•', url="http://t.me/"..sudos.UserName}},
 {{text = '♪ اضغط لاضافه البوت لمجمعتك •' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/SOURCEANUBIS/1469&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/SOURCEANUBIS/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 
@@ -4058,6 +4057,21 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/hjatwklas/12&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
+if text == 'بارلو' or text == 'Barlo' or text == 'barlo' then
+local Text = [[
+ᴘʀᴏɢʀᴀᴍᴍᴇʀ ʙᴀʀʟᴏ 𖡼
+ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ 𖡼
+ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ 𖡼
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '߷ • ᗪEᐯ ᗷᗩᖇᒪO • ߷',url="t.me/bar_lo0o0"}},
+{{text = '•الــقــنــوات♪', callback_data="/parlo"},{text = '•الــبــارات♪', callback_data="/parlo_1"}},  
+{{text = '•الــبــوتــات♪', callback_data="/parlo_12"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/swry00/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 
 if text == 'احمد كساحه' or text == 'كساحه' or text == 'مطور السورس' then
 local Text = [[
@@ -5754,6 +5768,22 @@ send(msg.chat_id_, msg.id_,' 𖢅ٖ  الايدي غير صحيح')
 end 
 end 
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil) 
+end
+if text == ("المطورين") and msa3d(msg) then
+local list = bot_data:smembers(ban_id..'Sudo:User')
+t = "\n 𖢅ٖ  قائمة المطورين \n○━━━━Aꪀꪊ᥇𝓲𝘴━━━━○\n"
+for k,v in pairs(list) do
+local username = bot_data:get(ban_id.."user:Name" .. v)
+if username then
+t = t..""..k.."- ([@"..username.."])\n"
+else
+t = t..""..k.."- 『 '..v..' 』\n"
+end
+end
+if #list == 0 then
+t = " 𖢅ٖ  لا يوجد مطورين"
+end
+send(msg.chat_id_, msg.id_, t)
 end
 if text == 'كشف' and tonumber(msg.reply_to_message_id_) > 0 then
 function start_function(extra, result, success)
@@ -11856,7 +11886,7 @@ local SOURCEANUBIS = bot_data:get(ban_id..'text:ch:user')
 if SOURCEANUBIS then
 send(msg.chat_id_, msg.id_,'['..SOURCEANUBIS..']')
 else
-send(msg.chat_id_, msg.id_,' 𖢅ٖ  لا تستطيع استخدام البوت \n 𖢅ٖ   يرجى الاشتراك بالقناه اولا \n 𖢅ٖ   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ??ٖ  لا تستطيع استخدام البوت \n 𖢅ٖ   يرجى الاشتراك بالقناه اولا \n 𖢅ٖ   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
@@ -14619,7 +14649,7 @@ if bot_data:get(ban_id..'Seh:User'..msg.chat_id_) then
 Text = ' 𖢅ٖ  تم تفعيل امر صيح'
 bot_data:del(ban_id..'Seh:User'..msg.chat_id_)  
 else
-Text = ' ??ٖ  بالتاكيد تم تفعيل امر صيح'
+Text = ' 𖢅ٖ  بالتاكيد تم تفعيل امر صيح'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -19030,7 +19060,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•??𝓲𝘳𝓲ꪖ',url="t.me/AHMED_MERO_love"},{text = '•ʀᴏʙᴏᴛ♪', url="t.me/mero_kol_heaty"}},
+{{text = '•𝘴𝓲𝘳𝓲ꪖ',url="t.me/AHMED_MERO_love"},{text = '•ʀᴏʙᴏᴛ♪', url="t.me/mero_kol_heaty"}},
 {{text = '˹ᴛᴀᴡᴏsʟ˼',url="t.me/SOURCEANUBIS"}}, 
 {{text = '𖢅ٖ 𝙱𝙰𝙲??↵', callback_data="/change-hhh"}},
 }
@@ -19236,10 +19266,58 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '•Aꫝꪑꫀᦔ𝅘𝅥𝅯♪',url="t.me/AHMED_MERO_love"},{text = '•𝘬ꪖ𝘴ꪖꫝꪖ 𝅘𝅥𝅮♪', url="t.me/MR_AAS"}},
+{{text = '•𝙱𝙰𝚁𝙻𝙾♪',url="t.me/bar_lo0o0"},{text = '•𝙶𝟾𝙰𝚉𝙰𝙻♪', url="t.me/G8AZAAL"}},
 {{text = '𖢅ٖ 𝙱𝙰𝙲𝙺↵', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
+if Text == '/parlo' then
+local Teext =[[
+ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝚋𝚊𝚛𝚕𝚘
+ ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
+ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '⌯ ˹𝙱𝙰𝚁𝙻𝙾 𝚂𝙾𝚄𝚁𝙲𝙴˼',url="t.me/bar_lo0o0o0o0o"},{text = '⌯ ˹𝚂𝙴𝙴 𝙿𝙾𝚂𝚃˼',url="t.me/G8A_ZAL"}},
+{{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+end
+if Text == '/parlo_1' then
+local Teext =[[
+ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝚋𝚊𝚛𝚕𝚘
+ ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
+ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '™✹ 𝙁𝘼𝙈𝙄𝙇𝙔 𝙎𝙊𝙐𝙍𝘾𝙀 ✹',url="t.me/G8AZALL"}},
+{{text = '✹ 𝘾𝙃 • 𝘽𝘼𝙍𝙇𝙊 ✹',url="t.me/bar_lo0o0o0o0o"}},
+{{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+end
+if Text == '/parlo_12' then
+local Teext =[[
+ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝚋𝚊𝚛𝚕𝚘
+ ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
+ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𖣐 بَآرلُِوو بَووت 𖣐',url="t.me/barlo0o_bot"}},
+{{text = '𖣐 طُآفُآ بَووت 𖣐',url="t.me/R_S_SR_bot"}},
+{{text = '𖣐 𝒃𝒂𝒓𝒍𝒐 𝒍𝒊𝒔𝒕 𖣐',url="t.me/BARLO_BOST_bot"}},
+{{text = '𖣐 𝒕𝒂𝒇𝒂 𝒍𝒊𝒔𝒕 𖣐',url="t.me/L_gazal_bot"}},
+{{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+end
+
 if Text == '/zzor' then
 local Teext =[[
 برج الثور ( 20/4 - 20/5 )
