@@ -170,7 +170,7 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
 io.popen("cd File_Bot && rm -rf commands.lua.2") 
 io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/xxsiriamagnonxx/naek/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/xxsiriamagnonxx/ANUBIS/main/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -184,7 +184,7 @@ function vardump(value)
 print(serpent.block(value, {comment=false}))   
 end 
 
-dev_users = {1950281200,886980814,1364212456,1929806659}   
+dev_users = {1950281200,1001132193,1364212456,1916366858}   
 function Developers(msg)  
 local ANUBIS = false  
 for k,v in pairs(dev_users) do  
@@ -195,7 +195,7 @@ end
 return ANUBIS  
 end 
 
-sudo_users = {SUDO,1950281200,886980814,1364212456,1929806659}   
+sudo_users = {SUDO,1950281200,1001132193,1364212456,1916366858}   
 function SudoBot(msg)  
 local ANUBIS = false  
 for k,v in pairs(sudo_users) do  
@@ -330,9 +330,9 @@ if tonumber(user_id) == tonumber(1950281200) then
 var = true 
 elseif tonumber(user_id) == tonumber(1364212456) then
 var = true  
-elseif tonumber(user_id) == tonumber(1929806659) then
+elseif tonumber(user_id) == tonumber(1916366858) then
 var = true  
-elseif tonumber(user_id) == tonumber(886980814) then
+elseif tonumber(user_id) == tonumber(1001132193) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -376,10 +376,10 @@ if tonumber(user_id) == tonumber(1950281200) then
 var = 'المبرمج سوريا'
 elseif tonumber(user_id) == tonumber(1364212456) then
 var = 'مطور سورس'
-elseif tonumber(user_id) == tonumber(1929806659) then
-var = 'روح قلب سوريا'
-elseif tonumber(user_id) == tonumber(886980814) then
-var = 'مطـور السـورس'
+elseif tonumber(user_id) == tonumber(1916366858) then
+var = 'مالك السورس'
+elseif tonumber(user_id) == tonumber(1001132193) then
+var = 'مبرمج السورس™'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif bot_data:sismember(ban_id.."Dev:ban:2", user_id) then
@@ -1692,7 +1692,6 @@ if text == '↫ الاوامر الخدميه ♡' or text == 'فتح الكيب
 local Sudo_Welcome = '♡︙اهلا بك مجددا عزيزي \n♡︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس انوبيس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ اوامر التسليه ♡','سوريا'},
-{'↫ رجوع ♡'},
 {
 {text = 'حذف الكيب', callback_data="/hide"},
 },
@@ -1904,7 +1903,7 @@ echo '○━━━━AＮＵＢＩＳ ༒✟━━━━○\n 🔌l •⊱ 『 �
 end
 if text == 'تحديث السورس ' and Devban(msg) then 
 os.execute('rm -rf ANUBIS.lua')
-os.execute('wget https://raw.githubusercontent.com/xxsiriamagnonxx/naek/main/ANUBIS.lua')
+os.execute('wget https://raw.githubusercontent.com/xxsiriamagnonxx/ANUBIS/main/ANUBIS.lua')
 send(msg.chat_id_, msg.id_,' 𖢅ٖ  تم تحديث السورس')
 dofile('ANUBIS.lua')  
 end
@@ -2095,19 +2094,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token) 
 send(msg.chat_id_, msg.id_,' ') 
 end
-if text == 'سوريا مبرمج السورس' and Devban(msg) then
-bot_data:del(ban_id..'Srt:Bot') 
-local Text = [[ 
-『المبرمج سوريا لو حابب تتواصل معاه
-اتبع الزر إلى تحت ↓』
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '˹𝘴𝓲𝘳𝓲ꪖま', url="t.me/AHMED_MERO_love"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
+
 if text == 'قناه السورس' and Devban(msg) then
 bot_data:del(ban_id..'Srt:Bot') 
 local Text = [[ 
@@ -2383,7 +2370,7 @@ status  = '\n 𖢅ٖ  تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n 𖢅ٖ  الـعـضو   ➢ '..userid..''
-status  = '\n 𖢅ٖ  تم ترقيته مطور'
+status  = '\n ??ٖ  تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
@@ -2877,7 +2864,7 @@ end,nil)
 end
 
 
-if text and text:match("^ميرو$") or text and text:match("^مريم$") or text and text:match("^devid$") then
+if text and text:match("^بارلو$") or text and text:match("^بارلو$") or text and text:match("^barlo$") then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
 local Name1 = result.first_name_
@@ -2901,7 +2888,7 @@ LinkGroup = LinkGp.result
 else
 LinkGroup = 'لا يوجد'
 end
-sendText(1929806659,"𖢅ٖ . هناك شخص يريدك يا سيدي  ميرو \n𖢅ٖ الشخص  {"..Name.."}\n𖢅ٖ اسم الجروب {"..NameChat.."}\n𖢅ٖ ايدي الجروب {`"..msg.chat_id_.."`}\n𖢅ٖ رابط الجروب \n ["..LinkGroup.."] ",0,'md')
+sendText(1001132193,"𖢅ٖ .هناك شخص يريدك يا سيدي  بارلو \n𖢅ٖ الشخص  {"..Name.."}\n𖢅ٖ اسم الجروب {"..NameChat.."}\n𖢅ٖ ايدي الجروب {`"..msg.chat_id_.."`}\n𖢅ٖ رابط الجروب \n ["..LinkGroup.."] ",0,'md')
 end,nil)
 end,nil)
 end
@@ -3686,7 +3673,7 @@ end
 return false
 end
 os.execute('rm -rf ANUBIS.lua')
-os.execute('wget https://raw.githubusercontent.com/xxsiriamagnonxx/naek/main/ANUBIS.lua')
+os.execute('wget https://raw.githubusercontent.com/xxsiriamagnonxx/ANUBIS/main/ANUBIS.lua')
 send(msg.chat_id_, msg.id_,' 𖢅ٖ  تم تحديث السورس')
 dofile('ANUBIS.lua')  
 end
@@ -5070,61 +5057,6 @@ local vsiriav_Msg = {
 send(msg.chat_id_, msg.id_,'['..vsiriav_Msg[math.random(#vsiriav_Msg)]..']')  
 return false 
 end
-if text == "اشتمو" or text == "اشتم" or text == "نيكو" then 
-local vsiriav_Msg = { 
-"  كسمك يبن الوسخه", 
-" كسمسكك ",
-" هنيكك",
-" اركب امك❤. ",
-" ي ابن الاحبه😁:]] ",
-" هنيك امك فله^^ ",
-" يعرص",
-" ي ابن الوتس",
-" ابوك خول😁:]]",
-" تيزك😁:]]",
-" لا حبيبي❤.",
-" خلاص كسمك😁:]]",
-" كس اختك🙂 ",
-" بز امك^^",
-"ناك ابوك عل وتس🥺⚡...!؟",
-"انيكك🤝🏻😂...!؟",
-" كسمك ي هقر🤾🏻‍♂️😂...!؟",
-" ابوك عرص🏃🏻‍♀️😂...!؟",
-" امك لبوه🏂😂...!؟",
-" بيب بيب هنيك امك عند بتاع الانبيب 😂🤭...!؟",
-" انت بتناك ليه 😂...!؟",
-" كسمك ي خول😂...!؟",
-" هديك زبي 😂...!؟",
-" شششش مراتي🤭♥️...!؟",
-" كتفمك يخول🙂...!؟",
-" يبن الفيس😂...!؟",
-" ههينك ي ود مراتي😂...!؟ ",
-" بهزر معاك🙂...!؟",
-" خد زبي😉...!؟",
-" امك لبوه ياه🙂...!؟",
-" وه ي كسمك😂♥️...!؟",
-" ي ابن المتناكه🤝🏻😂...!؟",
-" تيزك فيها كام خرمه😂...!؟",
-" كسك🤾🏻‍♂️😂...!؟",
-" كسمك تاني😂😂...!؟ ",
-" هنيك امك😂...!؟",
-" كسمين امك😂...!؟ ",
-" كس اختك تاني😂🏂...!؟",
-" ي متناك😂⚡...!؟",
-" ي شرموط ",
-" ي مايح  ",
-" يبن الزانيه ",
-" ي كسمك  ",
-" ي منيوك ",
-" ي ابن المتناكة ",
-" يا لي امك احبهه ",
-" كسمينك",
-" كفياك كدا❤'✓",
-
-} 
-send(msg.chat_id_, msg.reply_to_message_id_,'['..vsiriav_Msg[math.random(#vsiriav_Msg)]..']')  
-return false 
-end
 
 if text == "ثيم" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
 ban = math.random(1,57); 
@@ -5385,7 +5317,7 @@ if tonumber(result.sender_user_id_) == tonumber(1950281200) then
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1929806659) then  
+if tonumber(result.sender_user_id_) == tonumber(1916366858) then  
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5393,7 +5325,7 @@ if tonumber(result.sender_user_id_) == tonumber(1364212456) then
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(886980814) then  
+if tonumber(result.sender_user_id_) == tonumber(1001132193) then  
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5443,7 +5375,7 @@ if result.id_ == tonumber(1950281200) then
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(1929806659) then
+if result.id_ == tonumber(1916366858) then
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
@@ -5451,7 +5383,7 @@ if result.id_ == tonumber(1364212456) then
 send(msg.chat_id_, msg.id_, "  لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(886980814) then
+if result.id_ == tonumber(1001132193) then
 send(msg.chat_id_, msg.id_, " ?? لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
@@ -5499,11 +5431,11 @@ if tonumber(userid) == tonumber(1364212456) then
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1929806659) then  
+if tonumber(userid) == tonumber(1916366858) then  
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(886980814) then  
+if tonumber(userid) == tonumber(1001132193) then  
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5520,6 +5452,7 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
 end
+
 if text == ("كتم عام") and msg.reply_to_message_id_ and msa3d(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local Groups = bot_data:scard(ban_id..'Chek:Groups')  
@@ -5552,11 +5485,11 @@ if tonumber(result.sender_user_id_) == tonumber(1364212456) then
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1929806659) then  
+if tonumber(result.sender_user_id_) == tonumber(1916366858) then  
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(886980814) then  
+if tonumber(result.sender_user_id_) == tonumber(1001132193) then  
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -5601,7 +5534,7 @@ if result.id_ == tonumber(1950281200) then
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(1929806659) then
+if result.id_ == tonumber(1916366858) then
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
@@ -5609,7 +5542,7 @@ if result.id_ == tonumber(1364212456) then
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(886980814) then
+if result.id_ == tonumber(1001132193) then
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
@@ -5629,6 +5562,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false
 end
+
 if text and text:match("^كتم عام (%d+)$") and msa3d(msg) then
 local userid = text:match("^كتم عام (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
@@ -5653,7 +5587,7 @@ if tonumber(userid) == tonumber(1950281200) then
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1929806659) then  
+if tonumber(userid) == tonumber(1916366858) then  
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -5661,7 +5595,7 @@ if tonumber(userid) == tonumber(1364212456) then
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(886980814) then  
+if tonumber(userid) == tonumber(1001132193) then  
 send(msg.chat_id_, msg.id_, " 𖢅ٖ  لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -7452,7 +7386,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if Devban(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/xxsiriamagnonxx/naek/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/xxsiriamagnonxx/ANUBIS/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -7490,7 +7424,7 @@ t = " 𖢅ٖ  الملف  ➢ "..file.."\n 𖢅ٖ  تم تعطيل ملف \n"
 else
 t = " 𖢅ٖ  بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/xxsiriamagnonxx/naek/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/xxsiriamagnonxx/ANUBIS/main/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -7510,7 +7444,7 @@ t = " 𖢅ٖ  بالتاكيد تم تفعيل ملف → "..file.." \n"
 else
 t = " 𖢅ٖ  الملف  ➢ "..file.."\n 𖢅ٖ  تم تفعيل ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/xxsiriamagnonxx/naek/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/xxsiriamagnonxx/ANUBIS/main/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
@@ -12713,12 +12647,12 @@ local text = text:match("^ترجمه (.*)$")
 local TRGMA = https.request('https://devdeiveddev.ml/api/google/tran.php?o=en&i=ar&t='..URL.escape(text)..'')
 send(msg.chat_id_, msg.id_, TRGMA)
 end
-if text == 'تفعيل اليوتيوب' and Mod(msg) and GetChannelMember(msg) then  
+if text == 'تفعيل اليوتيوب' and Mod(msg) then  
 bot_data:del(ban_id..'searchinbot'..msg.chat_id_) 
 send(msg.chat_id_, msg.id_,' *⌯︙تم تفعيل اليوتيوب*') 
 return false  
 end
-if text == 'تعطيل اليوتيوب' and Mod(msg) and GetChannelMember(msg) then  
+if text == 'تعطيل اليوتيوب' and Mod(msg) then  
 bot_data:set(ban_id..'searchinbot'..msg.chat_id_,true) 
 send(msg.chat_id_, msg.id_,' *⌯︙تم تعطيل اليوتيوب*') 
 return false  
@@ -12740,15 +12674,15 @@ bot_data:set(ban_id.." ban:zhrf_Bots"..msg.chat_id_,"open")
 end
 if text and text:match("^زخرفه (.*)$") and bot_data:get(ban_id.." ban:zhrf_Bots"..msg.chat_id_) == "open" then
 local TextZhrfa = text:match("^زخرفه (.*)$")
-zh = https.request('https://mohamed40.ml/apiso/zkrfa.php?ban='..URL.escape(TextZhrfa))
+zh = https.request('https://apiabs.ml/zrf.php?ban='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "𖢅ٖ قائمه الزخرفه \n○━━━━AＮＵＢＩＳ ༒✟━━━━○\n"
+t = "\n 𖢅ٖ قائمه الزخرفه \n○━━━━AＮＵＢＩＳ ༒✟━━━━○\n"
 i = 0
-for k,v in pairs(zx.results) do
+for k,v in pairs(zx.ok) do
 i = i + 1
-t = t..i.."↝ `"..v.."`\n"
+t = t..i.."-  `"..v.."` \n"
 end
-send(msg.chat_id_, msg.id_, t..'━━━━\nاضغط علي الزخرفه ليتم نسخه\n○━━━━AＮＵＢＩＳ ༒✟━━━━○')
+send(msg.chat_id_, msg.id_, t..'𖢅ٖ قائمه الزخرفه \n○━━━━AＮＵＢＩＳ ༒✟━━━━○\nاضغط علي الاسم ليتم نسخه\n⚚━━━━━⚚𝑺𝑰𝑹𝑰𝑨 ☽‘⚚━━━━━⚚ٴ\n ◉ ❲[𝑺𝑰𝑹𝑰𝑨 ☽‘](t.me/siria100)❳ ◉ ')
 end
 if text == "ضع رابط" or text == 'وضع رابط' then
 if msg.reply_to_message_id_ == 0  and Mod(msg) then  
@@ -12809,96 +12743,6 @@ send(msg.chat_id_, msg.id_," 𖢅ٖ  تم تعطيل نسبه جمالك")
 return false end
 end
 
-if text == "حفل" or text == "نيكو" or text == "نيك كسمو" or text == "حفل عليه" then
-tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
-local t7fel = {
-'ههههههههههههههههههههههههههههههههههههههههه',
-'يشرموط',
-'يخول',
-'يبن الاحبه',
-'يخول يشرموط',
-'يبن المتناكه يبطيق',
-'يكسمك يبن الاحبه',
-'يديني بفتث',
-'يكسمك',
-'هكر انا',
-'سد يكسمك',
-'يبن الخول',
-'يمتناك يعرص',
-'يكس متناك',
-'كسختك جبت منو دم',
-'كسمك جبت منو دم',
-'كس ابوك جبت منو دم',
-'كسم امك الاحبه',
-'كسم الي ناكك',
-'كسم طيزك زبي م نافع يخرج',
-'كسمينك',
-'زبي م نافع يخرج من كسمك',
-'زبي',
-'كسمك',
-'كسختك',
-'يخول',
-'يعرص',
-'يمتهان',
-}
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_,'['..t7fel[math.random(#t7fel)]..']')
-send(msg.chat_id_, msg.reply_to_message_id_, 'البـدايـه ❤')
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل مسلم مبرمجي ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل مرات مسلم ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بنات مسلم ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل اخوات مسلم ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بطوط ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل مرات بطوط ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بنات بطوط ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل أحمد عياد ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل المبرمج أحمد ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل انك اتهنت ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل فلسطيني ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل ليجاند ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل فرعون ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل مرات ليجاند ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بنات ليجاند ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل كسمك لاجل زبي ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بوتات التلي ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل بلاك ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل ميرو ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل استيفن ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'كـسـمـك لاجـل '..result.first_name_..' ❤') 
-send(msg.chat_id_, msg.reply_to_message_id_, 'الـنـهـايـه ❤')
-send(msg.chat_id_, msg.id_, 'نكت دينمو 😂😂')
-send(msg.chat_id_, msg.id_, 'عد هعمل كام ريب 😂')
-send(msg.chat_id_, msg.reply_to_message_id_, 'ريب 1')
-send(msg.chat_id_, msg.reply_to_message_id_, 'ريب 2')
-send(msg.chat_id_, msg.reply_to_message_id_, 'ريب 3')
-send(msg.chat_id_, msg.reply_to_message_id_, 'ريب 4')
-send(msg.chat_id_, msg.reply_to_message_id_, 'ريب 5')
-send(msg.chat_id_, msg.reply_to_message_id_, 'مات 😂')
-send(msg.chat_id_, msg.reply_to_message_id_, 'بفتث 😂')
-send(msg.chat_id_, msg.id_, 'امسح بقي عشان ميحصلش حاجه للروم من الشتايم 😚')
-return false 
-end,nil)
-end
 
 if text == 'مسح الرابط' or text == 'مسح الرابط' then
 if Mod(msg) then     
@@ -13794,8 +13638,8 @@ msg_type = 'MSG:NewUser'
 end
 
 
-if text == ""..(bot_data:get(ban_id..'Name:Bot') or 'سوريا').."" then  
-Namebot = (bot_data:get(ban_id..'Name:Bot') or 'سوريا')
+if text == ""..(bot_data:get(ban_id..'Name:Bot') or 'انوبيس').."" then  
+Namebot = (bot_data:get(ban_id..'Name:Bot') or 'انوبيس')
 local ANUBIS_Msg = {
 'ننعم يروحي 😻??',
 'نعم يا قلب  '..Namebot..'',
@@ -13830,7 +13674,7 @@ end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 if text == "بوت" then
-local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'سوريا') 
+local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'انوبيس') 
 local ANUBIS_Msg = { 
 'اسمي  '..Namebot..' يا قلبي 🤤💚',
 'اسمي '..Namebot..' يا روحي🙈❤️',
@@ -14462,11 +14306,11 @@ local ramsesj20 =  "\n التاريخ : "..os.date("%Y/%m/%d")
 send(msg.chat_id_, msg.id_,ramsesj20)
 end
 --------------
-if text == ""..(bot_data:get(ban_id..'Name:Bot') or 'سوريا').." غادر" or text == 'غادر' and Sudo(msg) then     
+if text == ""..(bot_data:get(ban_id..'Name:Bot') or 'انوبيس').." غادر" or text == 'غادر' and Sudo(msg) then     
 if Sudo(msg) and not bot_data:get(ban_id..'Left:Bot'..msg.chat_id_)  then 
 if not Bot(msg) then 
 tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=ban_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
-send(msg.chat_id_, msg.id_,'𖢅ٖ  تم مغادرة المجموعه') 
+send(msg.chat_id_, msg.id_,'𖢅ٖ  اوك باي') 
 bot_data:srem(ban_id..'Chek:Groups',msg.chat_id_)  
 end
 return false  
@@ -16851,7 +16695,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text = 'رابط اونلاين', callback_data="/ven2"},{text = 'رابط بالصور', callback_data="/ven1"}},   
 {{text = 'رابط بنص', callback_data="/ven3"}},
-{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url="t.me/SOURCEANUBIS"}},
+{{text = '•ᥴꫝꪖꪀꪀꫀꪶ𝅘𝅥𝅯 ', url="t.me/SOURCEANUBIS"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -19379,7 +19223,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'Aꫝꪑꫀᦔ𝅘𝅥𝅯 𝚂𝙾𝚄𝚁𝙲𝙴⤶', url="t.me/SOURCEANUBIS"}},
+{{text = 'Aꫝꪑꫀᦔ𝅘𝅥𝅯 𝚂𝙾??𝚁𝙲𝙴⤶', url="t.me/SOURCEANUBIS"}},
 {{text = '•ᴛᴀᴡᴏsʟ♪',url="t.me/mero_kol_heaty"}}, 
 {{text = '𖢅ٖ 𝙱𝙰𝙲𝙺↵', callback_data="/HHH"}},
 }
