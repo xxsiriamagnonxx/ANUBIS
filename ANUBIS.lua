@@ -19249,7 +19249,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/theytry' then
 local Teext =[[
-• 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙸𝚁𝙸𝙰𖡌 ⇣
+• Wꫀꪶᥴꪮꪑꫀ 𝓽ꪮ 𝘴ꪊ𝘳ᥴꫀ ꪖꪀꪊ᥇𝓲𝘴⁂︎ ⇣
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -19261,7 +19261,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/units' then
 local Teext =[[
-• 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙸𝚁𝙸𝙰𖡌 ⇣
+• Wꫀꪶᥴꪮꪑꫀ 𝓽ꪮ 𝘴ꪊ𝘳ᥴꫀ ꪖꪀꪊ᥇𝓲𝘴⁂︎ ⇣
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -19281,7 +19281,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '⌯ ˹𝙱𝙰𝚁𝙻𝙾 𝚂𝙾𝚄𝚁𝙲𝙴˼',url="t.me/bar_lo0o0o0o0o"},{text = '⌯ ˹𝚂𝙴𝙴 𝙿𝙾𝚂𝚃˼',url="t.me/G8A_ZAL"}},
-{{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
+{{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/parlo_123"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
@@ -19296,7 +19296,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text = '™✹ 𝙁𝘼𝙈𝙄𝙇𝙔 𝙎𝙊𝙐𝙍𝘾𝙀 ✹',url="t.me/G8AZALL"}},
 {{text = '✹ 𝘾𝙃 • 𝘽𝘼𝙍𝙇𝙊 ✹',url="t.me/bar_lo0o0o0o0o"}},
-{{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
+{{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/parlo_123"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
@@ -19313,11 +19313,25 @@ keyboard.inline_keyboard = {
 {{text = '𖣐 طُآفُآ بَووت 𖣐',url="t.me/R_S_SR_bot"}},
 {{text = '𖣐 𝒃𝒂𝒓𝒍𝒐 𝒍𝒊𝒔𝒕 𖣐',url="t.me/BARLO_BOST_bot"}},
 {{text = '𖣐 𝒕𝒂𝒇𝒂 𝒍𝒊𝒔𝒕 𖣐',url="t.me/L_gazal_bot"}},
-{{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
+{{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/parlo_123"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
+if Text == '/parlo_123' then
+local Teext =[[
+ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝚋𝚊𝚛𝚕𝚘
+ ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
+ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
 
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝐁 𝐀 𝐑 𝐋 𝐎 𝟎 𝐎~"𖥕𝖋_𝖔𝖋𝖋🇬🇺',url="t.me/bar_lo0o0"}},
+{{text = '•الــقــنــوات♪', callback_data="/parlo"},{text = '•الــبــارات♪', callback_data="/parlo_1"}},  
+{{text = '•الــبــوتــات♪', callback_data="/parlo_12"}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+end
 if Text == '/zzor' then
 local Teext =[[
 برج الثور ( 20/4 - 20/5 )
