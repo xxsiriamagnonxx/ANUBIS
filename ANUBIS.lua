@@ -4026,7 +4026,7 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
 [◍ 𝗧𝗛𝗘 𝗕𝗘𝗦𝗧 𝗘𝗚 𝗦𝗢𝗥𝗖𝗘 𝗜𝗡 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 ⶄ ](t.me/SOURCEANUBIS)
-🌖
+🌖[◍⧼α⧽⧼и⧽⧼υ⧽⧼в⧽⧼ɪ⧽⧼s⧽!🥀🎼 ، ⇣ ⶄ ](t.me/SOURCEANUBIS)
 [◍ 𝗦𝗨𝗥𝗖𝗘 𝗔𝗡𝗨𝗕𝗜𝗦 𝗕𝗘𝗦𝗧 𝗦𝗨𝗥𝗖𝗘 𖡼 🐾](t.me/SOURCEANUBIS)
 [Wꫀꪶᥴꪮꪑꫀ 𝓽ꪮ 𝘴ꪊ𝘳ᥴꫀ ꪖꪀꪊ᥇𝓲𝘴⁂︎](t.me/SOURCEANUBIS)
 ]]
