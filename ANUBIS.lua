@@ -4025,10 +4025,10 @@ end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
-◍ 𝗧𝗛𝗘 𝗕𝗘𝗦𝗧 𝗘𝗚 𝗦𝗢𝗥𝗖𝗘 𝗜𝗡 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 ⶄ 
+[◍ 𝗧𝗛𝗘 𝗕𝗘𝗦𝗧 𝗘𝗚 𝗦𝗢𝗥𝗖𝗘 𝗜𝗡 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 ⶄ ](t.me/SOURCEANUBIS)
 🌖
-◍ 𝗦𝗨𝗥𝗖𝗘 𝗔𝗡𝗨𝗕𝗜𝗦 𝗕𝗘𝗦𝗧 𝗦𝗨𝗥𝗖𝗘 𖡼 🐾
-ᶠᵒˡˡᵒʷ ᵗʰᵉ ᵈᵉᵛᵉˡᵒᵖᵉʳ ᵇᵘᵗᵗᵒᶰˢ ᵇᵉˡᵒʷ ♰ 
+[◍ 𝗦𝗨𝗥𝗖𝗘 𝗔𝗡𝗨𝗕𝗜𝗦 𝗕𝗘𝗦𝗧 𝗦𝗨𝗥𝗖𝗘 𖡼 🐾](t.me/SOURCEANUBIS)
+[Wꫀꪶᥴꪮꪑꫀ 𝓽ꪮ 𝘴ꪊ𝘳ᥴꫀ ꪖꪀꪊ᥇𝓲𝘴⁂︎](t.me/SOURCEANUBIS)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11886,7 +11886,7 @@ local SOURCEANUBIS = bot_data:get(ban_id..'text:ch:user')
 if SOURCEANUBIS then
 send(msg.chat_id_, msg.id_,'['..SOURCEANUBIS..']')
 else
-send(msg.chat_id_, msg.id_,' ??ٖ  لا تستطيع استخدام البوت \n 𖢅ٖ   يرجى الاشتراك بالقناه اولا \n 𖢅ٖ   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' 𖢅ٖ  لا تستطيع استخدام البوت \n 𖢅ٖ   يرجى الاشتراك بالقناه اولا \n 𖢅ٖ   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
@@ -19107,7 +19107,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/change-siusr' then
 local Teext =[[
-𖢅 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 Aꫝꪑꫀᦔ𝅘𝅥𝅯 ⇣
+𖢅 Wꫀꪶᥴꪮꪑꫀ 𝓽ꪮ 𝘴ꪊ𝘳ᥴꫀ ꪖꪀꪊ᥇𝓲𝘴⁂︎ ⇣
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -19140,7 +19140,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⌯𝚂𝙸𝚁𝙸𝙰 𝚂𝚄𝚁𝙲𝙴༒',url="t.me/SOURCEANUBIS"},{text = '𝐌𝐄𝐑𝐎',url="t.me/MERO5O5"}},
+{{text = '⌯ 𝘴ꪊ𝘳ᥴꫀ ꪖꪀꪊ᥇𝓲𝘴⁂︎',url="t.me/SOURCEANUBIS"},{text = '𝐌𝐄𝐑𝐎',url="t.me/MERO5O5"}},
 {{text = '𖢅ٖ 𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19199,7 +19199,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⌯𝚂𝙸𝚁𝙸𝙰 𝚂𝚄𝚁𝙲𝙴༒',url="t.me/SOURCEANUBIS"},{text = '𝐌𝐄𝐑𝐎𖣏',url="t.me/MERO5O5"}},
+{{text = '⌯ 𝘴ꪊ𝘳ᥴꫀ ꪖꪀꪊ᥇𝓲𝘴⁂︎',url="t.me/SOURCEANUBIS"},{text = '𝐌𝐄𝐑𝐎𖣏',url="t.me/MERO5O5"}},
 {{text = '𖢅ٖ 𝙱𝙰𝙲𝙺↵', callback_data="/tafa-yquio"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19214,7 +19214,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '™𝘬ꪖ𝘴ꪖꫝꪖ 𝅘𝅥𝅮Tem',url="t.me/MR_AAS1"}},
-{{text = '*𝚂𝙸𝚁𝙸𝙰 𝚂𝚄𝚁𝙲𝙴༒*',url="t.me/SOURCEANUBIS"}},
+{{text = '* 𝘴ꪊ𝘳ᥴꫀ ꪖꪀꪊ᥇𝓲𝘴⁂︎*',url="t.me/SOURCEANUBIS"}},
 {{text = '𖢅ٖ 𝙱𝙰𝙲𝙺↵', callback_data="/tafa-yquio"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19237,7 +19237,7 @@ end
 
 if Text == '/HHH' then
 local Teext =[[
-• 𝚆𝙴𝙻𝙲??𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙸𝚁𝙸𝙰𖡌 ⇣
+Wꫀꪶᥴꪮꪑꫀ 𝓽ꪮ 𝘴ꪊ𝘳ᥴꫀ ꪖꪀꪊ᥇𝓲𝘴⁂︎
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -19280,7 +19280,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⌯ ˹𝙱𝙰𝚁𝙻𝙾 𝚂𝙾𝚄𝚁𝙲𝙴˼',url="t.me/bar_lo0o0o0o0o"},{text = '⌯ ˹𝚂𝙴𝙴 𝙿𝙾𝚂𝚃˼',url="t.me/G8A_ZAL"}},
+{{text = '⌯ ˹Aꪀꪊ᥇𝓲𝘴',url="t.me/SOURCEANUBIS"},{text = '⌯ ˹𝚂𝙴𝙴 𝙿𝙾𝚂𝚃˼',url="t.me/G8A_ZAL"}},
 {{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/parlo_123"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
