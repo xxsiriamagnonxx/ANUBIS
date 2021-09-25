@@ -2449,8 +2449,8 @@ send(msg.chat_id_, msg.id_, " 𖢅ٖ  تم حفظ الاسم")
 return false
 end 
 if bot_data:get(ban_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ●' then   
-send(msg.chat_id_, msg.id_," ● تم الغاء الاذاعه للخاص")
+if text == 'الغاء' or text == 'الغاء 𖢅ٖ ' then   
+send(msg.chat_id_, msg.id_," 𖢅ٖ  تم الغاء الاذاعه للخاص")
 bot_data:del(ban_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end 
@@ -2477,14 +2477,14 @@ for k,v in pairs(list) do
 sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)   
 end 
 end
-send(msg.chat_id_, msg.id_," ● تمت الاذاعه الى >>{"..#list.."} مشترك في البوت ")
+send(msg.chat_id_, msg.id_," 𖢅ٖ  تمت الاذاعه الى >>{"..#list.."} مشترك في البوت ")
 bot_data:del(ban_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end
 if bot_data:get(ban_id.."YYYBD_aza3h3" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
 local msa3d = bot_data:get(ban_id.."id:msa3d:ban")
-if text == 'الغاء' or text == 'الغاء ●' then   
-send(msg.chat_id_, msg.id_," ● تم الغاء الرساله للمطور")
+if text == 'الغاء' or text == 'الغاء 𖢅ٖ ' then   
+send(msg.chat_id_, msg.id_," 𖢅ٖ  تم الغاء الرساله للمطور")
 bot_data:del(ban_id.."YYYBD_aza3h3" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end 
@@ -2502,8 +2502,8 @@ end
 end,nil)
 end
 if bot_data:get(ban_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ●' then   
-send(msg.chat_id_, msg.id_," ● تم الغاء الاذاعه")
+if text == 'الغاء' or text == 'الغاء 𖢅ٖ ' then   
+send(msg.chat_id_, msg.id_," 𖢅ٖ  تم الغاء الاذاعه")
 bot_data:del(ban_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end 
@@ -2530,13 +2530,13 @@ for k,v in pairs(list) do
 sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)   
 end 
 end
-send(msg.chat_id_, msg.id_," ● تمت الاذاعه الى >>{"..#list.."} كروب في البوت ")
+send(msg.chat_id_, msg.id_," 𖢅ٖ  تمت الاذاعه الى >>{"..#list.."} كروب في البوت ")
 bot_data:del(ban_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end
 
 if bot_data:get(ban_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ●' then   
-send(msg.chat_id_, msg.id_," ● تم الغاء الاذاعه")
+if text == 'الغاء' or text == 'الغاء 𖢅ٖ ' then   
+send(msg.chat_id_, msg.id_," 𖢅ٖ  تم الغاء الاذاعه")
 bot_data:del(ban_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  
 end 
@@ -2550,13 +2550,13 @@ message_ids_ = {[0] = msg.id_},
 disable_notification_ = 0,
 from_background_ = 1},function(a,t) end,nil) 
 end   
-send(msg.chat_id_, msg.id_," ● تمت الاذاعه الى >>{"..#list.."} جروبات في البوت ")
+send(msg.chat_id_, msg.id_," 𖢅ٖ  تمت الاذاعه الى >>{"..#list.."} جروبات في البوت ")
 bot_data:del(ban_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 end
 if bot_data:get(ban_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ●' then   
-send(msg.chat_id_, msg.id_," ● تم الغاء الاذاعه")
+if text == 'الغاء' or text == 'الغاء 𖢅ٖ ' then   
+send(msg.chat_id_, msg.id_," 𖢅ٖ  تم الغاء الاذاعه")
 bot_data:del(ban_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  
 end 
@@ -2570,7 +2570,7 @@ message_ids_ = {[0] = msg.id_},
 disable_notification_ = 0,
 from_background_ = 1},function(a,t) end,nil) 
 end   
-send(msg.chat_id_, msg.id_," ● تمت الاذاعه الى >>{"..#list.."} مشترك في البوت ")
+send(msg.chat_id_, msg.id_," 𖢅ٖ  تمت الاذاعه الى >>{"..#list.."} مشترك في البوت ")
 bot_data:del(ban_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 end
@@ -4012,16 +4012,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
-if text == 'اذاعه' then   
-local Text = "اختار\nاذاعة خاص\nاذاعة جروبات\nرساله للمطور الاساسي"
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text="اذاعة جروبات",callback_data="YYYBD_aza3h1"..msg.sender_user_id_},{text="اذاعة خاص",callback_data="YYYBD_aza3h2"..msg.sender_user_id_}},
-{{text="رساله للمطور الاساسي",callback_data="YYYBD_aza3h3"..msg.sender_user_id_}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
+
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
@@ -7332,7 +7323,7 @@ end
 if text == 'قفل الجهات' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 bot_data:set(ban_id.."lock:Contact"..msg.chat_id_,'del')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' 𖢅ٖ   مـن قبـل  ➢ [『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』](T.ME/'..(data.username_ or 'SOURCEANUBIS')..') \n ??ٖ  تـم قفـل الجهات ')  
+send(msg.chat_id_, msg.id_,' 𖢅ٖ   مـن قبـل  ➢ [『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』](T.ME/'..(data.username_ or 'SOURCEANUBIS')..') \n 𖢅ٖ  تـم قفـل الجهات ')  
 end,nil)   
 elseif text == 'قفل الجهات بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 bot_data:set(ban_id.."lock:Contact"..msg.chat_id_,'ked')  
