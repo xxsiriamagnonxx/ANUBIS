@@ -2205,7 +2205,6 @@ end
 send(msg.chat_id_, msg.id_, t)
 return false
 end
-
 if text=="اذاعه خاص " and msg.reply_to_message_id_ == 0 and msa3d(msg) then 
 bot_data:setex(ban_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," 𖢅ٖ  ارسل الان اذاعتك؟ \n 𖢅ٖ  للخروج ارسل الغاء ")
@@ -4013,7 +4012,16 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
-
+if text == 'اذاعه' then   
+local Text = "اختار\nاذاعة خاص\nاذاعة جروبات\nرساله للمطور الاساسي"
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text="اذاعة جروبات",callback_data="YYYBD_aza3h1"..msg.sender_user_id_},{text="اذاعة خاص",callback_data="YYYBD_aza3h2"..msg.sender_user_id_}},
+{{text="رساله للمطور الاساسي",callback_data="YYYBD_aza3h3"..msg.sender_user_id_}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
@@ -4081,26 +4089,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/hjatwklas/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text=="اذاعه خاص " and msg.reply_to_message_id_ == 0 and msa3d(msg) then 
-bot_data:setex(ban_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_," ᥀ ارسل الان اذاعتك؟ \n ᥀ للخروج ارسل الغاء ")
-return false
-end 
-if text=="اذاعه " and msg.reply_to_message_id_ == 0 and msa3d(msg) then 
-bot_data:setex(ban_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_," ᥀ ارسل الان اذاعتك؟ \n ᥀ للخروج ارسل الغاء ")
-return false
-end  
-if text=="اذاعه بالتوجيه " and msg.reply_to_message_id_ == 0  and msa3d(msg) then 
-bot_data:setex(ban_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_," ᥀ ارسل لي التوجيه الان")
-return false
-end 
-if text=="اذاعه بالتوجيه خاص " and msg.reply_to_message_id_ == 0  and msa3d(msg) then 
-bot_data:setex(ban_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_," ᥀ ارسل لي التوجيه الان")
-return false
-end 
+
 
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 bot_data:setex(ban_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
@@ -13759,17 +13748,49 @@ send(msg.chat_id_, msg.id_,"\n٭ تم تعطيل الاذاعه")
 return false
 end 
 
-if text=="اذاعه خاص " and msg.reply_to_message_id_ == 0 and msa3d(msg) then 
-bot_data:setex(ban_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_," ᥀ ارسل الان اذاعتك؟ \n ᥀ للخروج ارسل الغاء ")
+if text=="اذاعه عام" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
+if bot_data:get(ban_id.."Status:Ss") and not SudoBot(msg) then 
+send(msg.chat_id_, msg.id_,"٭ الاذاعه معطله من قبل المطور الاساسي")
+return false
+end
+bot_data:setex(ban_id.."Ss:Cs" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
+send(msg.chat_id_, msg.id_,"٭ ارسل لي سواء ~ { ملصق, متحركه, صوره, رساله }\n٭ للخروج ارسل الغاء ") 
 return false
 end 
-if text=="اذاعه " and msg.reply_to_message_id_ == 0 and msa3d(msg) then 
-bot_data:setex(ban_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_," ᥀ ارسل الان اذاعتك؟ \n ᥀ للخروج ارسل الغاء ")
-return false
-end  
 
+if bot_data:get(ban_id.."Ss:Cs" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
+if text == "الغاء" or text == "الغاء" then 
+send(msg.chat_id_, msg.id_,"٭ تم الغاء الاذاعه") 
+bot_data:del(ban_id.."Ss:Cs" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+return false
+end 
+local list = bot_data:smembers(ban_id..'UsersBot') 
+if msg.content_.text_ then
+for k,v in pairs(list) do 
+send(v, 0,"["..msg.content_.text_.."]") 
+end
+elseif msg.content_.photo_ then
+if msg.content_.photo_.sizes_[0] then
+photo = msg.content_.photo_.sizes_[0].photo_.persistent_id_
+elseif msg.content_.photo_.sizes_[1] then
+photo = msg.content_.photo_.sizes_[1].photo_.persistent_id_
+end
+for k,v in pairs(list) do 
+sendPhoto(v, 0, photo,(msg.content_.caption_ or ""))
+end 
+elseif msg.content_.animation_ then
+for k,v in pairs(list) do 
+sendDocument(v, 0, msg.content_.animation_.animation_.persistent_id_,(msg.content_.caption_ or "")) 
+end 
+elseif msg.content_.sticker_ then
+for k,v in pairs(list) do 
+sendSticker(v, 0, msg.content_.sticker_.sticker_.persistent_id_) 
+end 
+end
+send(msg.chat_id_, msg.id_,"٭ تمت الاذاعه الى المشتركين والمجموعات ") 
+bot_data:del(ban_id.."Ss:Cs" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+return false
+end
 if text=="اذاعه بالتوجيه" and msg.reply_to_message_id_ == 0  and msa3d(msg) then 
 if bot_data:get(ban_id..'Bc:Bots') and not Devban(msg) then 
 send(msg.chat_id_, msg.id_,' 𖢅ٖ  الاذاعه معطله من قبل المطور الاساسي')
@@ -16682,7 +16703,7 @@ keyboard.inline_keyboard = {
 {{text = 'Snspchat', url="https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fdeleteaccount"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/yhu79/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/hjatwklas/13&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'بوت الحذف' or text == 'بوت حذف' or text == 'بوت حذف حسابات' then
 local Text = [[
@@ -16694,7 +16715,7 @@ keyboard.inline_keyboard = {
 {{text = 'BOT Telegram', url="t.me/LC6BOT"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/yhu79/7&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/hjatwklas/13&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'الرابط' or text == 'رابط'  then
 local Text = [[
@@ -19004,7 +19025,7 @@ keyboard.inline_keyboard = {
 {text = '• الجوزاء 🌩', callback_data="/zguza"},{text = '• الدلو 🦯', callback_data="/zdlu"},
 },
 {
-{text = '⇣ 𝙰𝙽𝚄𝙱𝙸𝚂 ⇣', url="t.me/SOURCEANUBIS"},
+{text = '⇣ 𝙰𝙽𝚄??𝙸𝚂 ⇣', url="t.me/SOURCEANUBIS"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
