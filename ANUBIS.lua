@@ -4080,7 +4080,26 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/hjatwklas/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-
+if text=="اذاعه خاص " and msg.reply_to_message_id_ == 0 and msa3d(msg) then 
+bot_data:setex(ban_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
+send(msg.chat_id_, msg.id_," ᥀ ارسل الان اذاعتك؟ \n ᥀ للخروج ارسل الغاء ")
+return false
+end 
+if text=="اذاعه " and msg.reply_to_message_id_ == 0 and msa3d(msg) then 
+bot_data:setex(ban_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
+send(msg.chat_id_, msg.id_," ᥀ ارسل الان اذاعتك؟ \n ᥀ للخروج ارسل الغاء ")
+return false
+end  
+if text=="اذاعه بالتوجيه " and msg.reply_to_message_id_ == 0  and msa3d(msg) then 
+bot_data:setex(ban_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
+send(msg.chat_id_, msg.id_," ᥀ ارسل لي التوجيه الان")
+return false
+end 
+if text=="اذاعه بالتوجيه خاص " and msg.reply_to_message_id_ == 0  and msa3d(msg) then 
+bot_data:setex(ban_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
+send(msg.chat_id_, msg.id_," ᥀ ارسل لي التوجيه الان")
+return false
+end 
 
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 bot_data:setex(ban_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
@@ -14883,7 +14902,7 @@ local List = {
 - رسائلڪ  الطيفهہَ ⁞ #msgs 💘 ٬
 - رتبتڪ الحلوه ⁞ #stast  💘٬
 - سحڪاتڪ الفول ⁞ #edit 💘 ٬
-- 𝗖𝗛 - 『@SOURCEANUBIS』 💞.
+- 𝗖𝗛 - 『@SOURCEANUBIS』 ??.
 ]],
 [[
 𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
